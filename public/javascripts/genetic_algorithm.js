@@ -1,22 +1,33 @@
 var initial_fitness = 0;
-var delta_fitness = 0;
+var delta_fitness   = 0;
 var percentage_done = 0;
+
+var target = '';
+var source = '';
 
 $(document).ready(function() {
 
     $("#button").bind('click', function(){
-      var target = $('#string').val();
-      //var source = Array(target.length + 1).join("x");
-      var source = generateRandomSource(target.length);
+      initial_fitness = 0;
+      delta_fitness   = 0;
+      percentage_done = 0;
+
+      target = '';
+      source = '';
+
+      target = $('#string').val();
+      source = generateRandomSource(target.length);
+
       $('#result').text(' ');
       $('.progress').css('visibility', 'visible');
+
       start(source, target);
     });
 });
 
 function generateRandomSource(len) {
   var possible_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#€%&/(),.!=?+-_*^';
-  var starting_str = '';
+  var starting_str   = '';
   for(var i = 0; i < len; i++) {
     starting_str += possible_chars.charAt(Math.floor(Math.random() * possible_chars.length));
   }
@@ -43,7 +54,6 @@ function start(source, target) {
   if(fitval_m < fitval) {
      fitval = fitval_m;
      source = m;
-    // $('#genetic').text(count + " " + fitval_m + " " + m);
      $('#evo').text(count);
      $('#fit').text(fitval_m);
      $('#cur').text(m);
