@@ -1,0 +1,44 @@
+body {
+  font-family: Menlo,Monaco,Consolas,Courier New,monospace;
+  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
+}
+
+a {
+  color: #00B7FF;
+}
+
+#heading_div {
+  margin-top: 50px;
+  padding-left: 15px;
+}
+
+#table_div {
+  margin-top: 50px;
+}
+
+#result_div {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+#input_div.input-group {
+  margin-top: 70px;
+}
+
+.input-group {
+  min-width: 270px !important;
+}
+
+.progress {
+  visibility: hidden;
+  min-width: 270px !important;
+}
+
+table.table {
+  min-width: 270px !important;
+}
+
+tbody {
+  color: #bf2a5c;
+  font-family: Menlo,Monaco,Consolas,Courier New,monospace;
+}
