@@ -6,13 +6,22 @@ $(document).ready(function() {
 
     $("#button").bind('click', function(){
       var target = $('#string').val();
-      var source = Array(target.length + 1).join("x");
+      //var source = Array(target.length + 1).join("x");
+      var source = generateRandomSource(target.length);
       $('#result').text(' ');
       $('.progress').css('visibility', 'visible');
       start(source, target);
     });
 });
 
+function generateRandomSource(len) {
+  var possible_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#€%&/(),.!=?+-_*^';
+  var starting_str = '';
+  for(var i = 0; i < len; i++) {
+    starting_str += possible_chars.charAt(Math.floor(Math.random() * possible_chars.length));
+  }
+  return starting_str;
+}
 
 function start(source, target) {
   var fitval = fitness(source, target);
