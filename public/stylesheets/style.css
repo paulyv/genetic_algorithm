@@ -42,3 +42,7 @@ tbody {
   color: #bf2a5c;
   font-family: Menlo,Monaco,Consolas,Courier New,monospace;
 }
+
+#footer-text {
+  margin-right: 20px !important;
+}

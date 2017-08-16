@@ -1,0 +1,18 @@
+
+// Creator:
+
+   Pauly V.
+
+// Tech:
+
+   Node.js
+   ExpressJS
+   Jade
+   JQuery
+   Bootstrap
+   CSS 3
+
+
+// Repository:
+
+   https://github.com/paulyv/genetic_algorithm/
